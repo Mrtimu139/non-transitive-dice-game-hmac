@@ -21,4 +21,32 @@ A console-based implementation of a Generalized Non-Transitive Dice Game with HM
   npm install chalk cli-table3
 
 ## Run the Game
+- Launch the game with custom dice configurations:
+  ```bash
+  node game2.js <dice configurations>
+# Examples
+- Valid Configurations:
+  ```bash
+  node game2.js 1,2,3,4,5,6 1,2,3,4,5,6 1,2,3,4,5,6 1,2,3,4,5,6
+  node game2.js 2,2,4,4,9,9 1,1,6,6,8,8 3,3,5,5,7,7
+- Invalid Configurations:
+   - No dice provided
+     ```bash
+     node game2.js
+   - Less than 3 dice
+      ```bash
+     node game2.js 1,2
+    - Non-integer values
+        ```bash
+      node game2.js 1,2,3,a,b
+    - Negative values
+      ```bash
+      node game2.js 1,2,3,4,-5,6
+
+
+The computer reveals its move, the key, and the sum modulo dice range.
+The user can verify the HMAC using any standard HMAC tool.
+      
+
+
 
