@@ -43,10 +43,22 @@ A console-based implementation of a Generalized Non-Transitive Dice Game with HM
       ```bash
       node game2.js 1,2,3,4,-5,6
 
+## Gameplay
+- The computer generates a random value (x) and a secret key.
+- The computer displays the HMAC of its value to ensure fairness.
+- The user selects a number (y).
+- The computer reveals:
+    - Its original random value (x).
+    - The secret key.
+    - The sum modulo range: (x + y) % range.
+- The user can verify the HMAC independently using the provided key and value.
 
-The computer reveals its move, the key, and the sum modulo dice range.
-The user can verify the HMAC using any standard HMAC tool.
-      
+## Error Handling
+- The program handles invalid inputs gracefully:
+    - Provides informative error messages for invalid configurations.
+    - Prevents invalid moves and allows users to retry.
+
+
 
 
 
